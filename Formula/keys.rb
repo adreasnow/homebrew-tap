@@ -5,13 +5,13 @@
 class Keys < Formula
   desc "Lightweight Go wrapper around your OS keychain to act as a simple CLI tool for managing secrets."
   homepage "https://github.com/adreasnow/keys"
-  version "2026.3.3"
+  version "2026.3.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adreasnow/keys/releases/download/v2026.3.3/keys_darwin_amd64.tar.gz"
-      sha256 "fc7955ab235bafc38fcb75c19d47bb25c50a5f47585098bbffd1ee5a2514310b"
+      url "https://github.com/adreasnow/keys/releases/download/v2026.3.4/keys_darwin_amd64.tar.gz"
+      sha256 "68dbea5d2824becc78691be5266cf26b6b732ca302ce7b9933ae4cd3cf1bab0a"
 
       define_method(:install) do
         bin.install "keys"
@@ -21,8 +21,8 @@ class Keys < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adreasnow/keys/releases/download/v2026.3.3/keys_darwin_arm64.tar.gz"
-      sha256 "f29cc24538f18107c865d2330825e479e1a3d9380c5c4ad2715ac2768dd93fd4"
+      url "https://github.com/adreasnow/keys/releases/download/v2026.3.4/keys_darwin_arm64.tar.gz"
+      sha256 "4bb5cb2ea1931d6eba35104110d3e6aaf7bef45abed8639b25c9d458bd0c4c3b"
 
       define_method(:install) do
         bin.install "keys"
@@ -35,8 +35,8 @@ class Keys < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adreasnow/keys/releases/download/v2026.3.3/keys_linux_amd64.tar.gz"
-      sha256 "d23083b91c42312d4f6b25bb8843a6bf381f57ecee6ce85a0f5be8cef5edd6a3"
+      url "https://github.com/adreasnow/keys/releases/download/v2026.3.4/keys_linux_amd64.tar.gz"
+      sha256 "dd1abad966bb1e6af2b81825e09ce26bb88b69eb13d1b0bfa5fa601e9a5d0f69"
       define_method(:install) do
         bin.install "keys"
         bash_completion.install "completions/keys.bash" => "keys"
@@ -45,8 +45,8 @@ class Keys < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adreasnow/keys/releases/download/v2026.3.3/keys_linux_arm64.tar.gz"
-      sha256 "f525037cdadc924f5fc1139090de0dbad5b3f154c2263b83a46a75a0512ae0bd"
+      url "https://github.com/adreasnow/keys/releases/download/v2026.3.4/keys_linux_arm64.tar.gz"
+      sha256 "805d049ca6af46af55b6325613086ac2b2ee823b644fabf86fd9d1a147105306"
       define_method(:install) do
         bin.install "keys"
         bash_completion.install "completions/keys.bash" => "keys"
