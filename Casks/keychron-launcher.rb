@@ -5,18 +5,18 @@ cask "keychron-launcher" do
   name "keychron-launcher"
   desc "Keychron Launcher electron app"
   homepage "https://github.com/adreasnow/keychron-launcher"
-  version "2026.3.7"
+  version "2026.3.8"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
-  binary "Keychron Launcher.app/Contents/MacOS/Keychron Launcher"
+  binary "keychron-launcher"
 
   on_macos do
     on_arm do
       url "https://github.com/adreasnow/keychron-launcher/releases/download/v#{version}/Keychron-Launcher_darwin_arm64.zip"
-      sha256 "ddda99be3c3821d0c2513366e7e9ef3462eef8ccf1696d8017bbff7d0dc21517"
+      sha256 "726db286c4ad178dcfacd3c9ce2170f681506564c87903747888a85dc541ad34"
     end
   end
 
