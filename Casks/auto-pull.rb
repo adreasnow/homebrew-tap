@@ -5,7 +5,7 @@ cask "auto-pull" do
   name "auto-pull"
   desc "Automatically pull git repositories on a schedule (macOS menu bar app)"
   homepage "https://github.com/adreasnow/auto-pull"
-  version "2026.3.4"
+  version "2026.3.5"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,11 +16,11 @@ cask "auto-pull" do
   on_macos do
     on_intel do
       url "https://github.com/adreasnow/auto-pull/releases/download/v#{version}/auto-pull_darwin_amd64.zip"
-      sha256 "320af6876e1e88748072da4aa9884f91a23dc638da6cb25992e175004c33b6d5"
+      sha256 "e7fbb6bb290a8bc8317398057fea7d6814782879b3a87a066018e3806997dd8b"
     end
     on_arm do
       url "https://github.com/adreasnow/auto-pull/releases/download/v#{version}/auto-pull_darwin_arm64.zip"
-      sha256 "2a08d9f5e46b9a99505bf27b02565b36077e1463360de2e4f9da9dd89de722ba"
+      sha256 "73ed1bab7f339946c6fd5c344e490d8b79e16ec5639b0ccf81c68cd8757e25bc"
     end
   end
 
