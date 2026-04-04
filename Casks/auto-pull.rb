@@ -2,27 +2,28 @@
 cask "auto-pull" do
   app "Auto Pull.app"
 
+  version "2026.4.1"
+
+  on_macos do
+    on_intel do
+      url "https://github.com/adreasnow/auto-pull/releases/download/v#{version}/auto-pull_darwin_amd64.zip"
+      sha256 "93c72b2e44cde9b4c34d43e9fce4c26cea16aeef0cfc368e3cf6c83922b87132"
+    end
+    on_arm do
+      url "https://github.com/adreasnow/auto-pull/releases/download/v#{version}/auto-pull_darwin_arm64.zip"
+      sha256 "2932f2f2b7cd60ddb6cf34271cf26631a757608cefa87fda433546cf2840895a"
+    end
+  end
+
   name "auto-pull"
   desc "Automatically pull git repositories on a schedule (macOS menu bar app)"
   homepage "https://github.com/adreasnow/auto-pull"
-  version "2026.3.6"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
   binary "Auto Pull.app/Contents/MacOS/autopull"
-
-  on_macos do
-    on_intel do
-      url "https://github.com/adreasnow/auto-pull/releases/download/v#{version}/auto-pull_darwin_amd64.zip"
-      sha256 "8dd8cb6944d50d89ad275c68b6306b48dbb6084653a18648eaa762cedcc32a48"
-    end
-    on_arm do
-      url "https://github.com/adreasnow/auto-pull/releases/download/v#{version}/auto-pull_darwin_arm64.zip"
-      sha256 "a0f57505b71e611a197ed0b0f56f5d98e844ef124ae0afc27d026aaa5594bce7"
-    end
-  end
 
   postflight do
     system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/Auto Pull.app"]
