@@ -2,16 +2,16 @@
 cask "auto-pull" do
   app "Auto Pull.app"
 
-  version "2026.4.2"
+  version "2026.5.4"
 
   on_macos do
     on_intel do
+      sha256 "10b2772f8033a2c361696693cb4b0370cff4764eacfdb5ea77b18812d18b25c5"
       url "https://github.com/adreasnow/auto-pull/releases/download/v#{version}/auto-pull_darwin_amd64.zip"
-      sha256 "38ccbf4f845665f9b28966188d04895b6672a5e353de3763483b0204e2b57744"
     end
     on_arm do
+      sha256 "f394b0b8ac15aa87990040268b33c461cc6e4d2830432a235c83ac2c26ee7168"
       url "https://github.com/adreasnow/auto-pull/releases/download/v#{version}/auto-pull_darwin_arm64.zip"
-      sha256 "a0e785dba9a0f11c874ee12c8e1ecc38b174dda5f2fba6ff340e9d83af3ea797"
     end
   end
 
